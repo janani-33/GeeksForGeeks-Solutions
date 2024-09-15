@@ -23,7 +23,6 @@ class Solution {
     public int nthStair(int n) {
         if(n<=2)
         return n;
-        int i=(n/2-1)+2;
-        return i;
+        return n/2+1;
     }
 }
