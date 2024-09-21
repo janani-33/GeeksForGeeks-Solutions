@@ -37,18 +37,16 @@ public class Main {
 
 class Solution {
     static int minJumps(int[] arr) {
-        int n=arr.length;
-        int res=0;
-        int max=0,cur=0;
-        for(int i=0;i<n;i++){
-            if(i>max)
+        int cur=0,max=0,c=0;
+        for(int i=0;i<arr.length;i++){
+            if(max<i)
             return -1;
             if(i>cur){
                 cur=max;
-                res++;
+                c++;
             }
-            max=Math.max(max,i+arr[i]);
+            max=Math.max(max,arr[i]+i);
         }
-        return res;
+        return c;
     }
 }
